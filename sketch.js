@@ -1,8 +1,8 @@
-var myImage0
-var myImage1
-var myImage2
-var myImage3
-
+var myImage0;
+var myImage1;
+var myImage2;
+var myImage3;
+var drawPoint;
 var myMap;
 var canvas;
 var myPos;
@@ -87,7 +87,7 @@ function draw() {
     line(me.x,me.y,maldive.x,maldive.y);
 
 
-    
+
   let s = 'CLICK ON THE PLACE YOU WANT TO BE';
   stroke('black');
   strokeWeight(0.5);
