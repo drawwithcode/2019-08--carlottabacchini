@@ -98,3 +98,4 @@ function drawPoint() {
   line(me.x,me.y,maldive.x,maldive.y);
 
 }
+}
