@@ -16,7 +16,7 @@ var options = {
   lat: 0,
   lng: 0,
   zoom: 3,
-  style: "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+  style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
 }
 
 var maldive = {
@@ -72,7 +72,7 @@ function drawPoint() {
   var disAway = calcGeoDistance(myPos.latitude, myPos.longitude, maldiveLat, maldiveLng, "km");
 
   push();
-  var textMaldive = ("You are" + Math.round(disAway) + "Km away from where you want to be", 70, 70);
+  var textMaldive = ("You are" + Math.round(disAway) + "away from where you want to be", 70, 70);
   fill(255);
   noStroke()
   pop();
