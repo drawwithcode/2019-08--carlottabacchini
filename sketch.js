@@ -52,6 +52,38 @@ function setup() {
 }
 
 function draw() {
+
+  unction drawPoint() {
+    clear();
+    var disAway = calcGeoDistance(myPos.latitude, myPos.longitude, maldiveLat, maldiveLng, "km");
+
+    push();
+    var textMaldive = ("You are" + Math.round(disAway) + "away from where you want to be", 70, 70);
+    fill(255);
+    noStroke()
+    pop();
+
+
+    push();
+    var maldive = myMap.latLngToPixel(maldiveLat, maldiveLng);
+    ellipse(maldive.x, maldive.y, 8, 8);
+    noFill();
+    stroke(255, 217, 0);
+    pop();
+
+    push();
+    fill(255, 217, 0);
+    noStroke();
+    var me = myMap.latLngToPixel(myPos.latitude, myPos.longitude);
+    ellipse(me.x, me.y, 5, 5);
+    pop();
+
+    push();
+    stroke(255, 217, 0);
+    strokeWeight(0.8);
+    line(me.x,me.y,maldive.x,maldive.y);
+
+    
   let s = 'CLICK ON THE PLACE YOU WANT TO BE';
   stroke('black');
   strokeWeight(0.5);
@@ -67,35 +99,7 @@ image(myImage2,width/2 - 530 ,height/2 + 50, 533, 365);
 image(myImage3,width/2 - 530 ,height/2 - 340, 533, 355);
 
 
-function drawPoint() {
-  clear();
-  var disAway = calcGeoDistance(myPos.latitude, myPos.longitude, maldiveLat, maldiveLng, "km");
-
-  push();
-  var textMaldive = ("You are" + Math.round(disAway) + "away from where you want to be", 70, 70);
-  fill(255);
-  noStroke()
-  pop();
-
-
-  push();
-  var maldive = myMap.latLngToPixel(maldiveLat, maldiveLng);
-  ellipse(maldive.x, maldive.y, 8, 8);
-  noFill();
-  stroke(255, 217, 0);
-  pop();
-
-  push();
-  fill(255, 217, 0);
-  noStroke();
-  var me = myMap.latLngToPixel(myPos.latitude, myPos.longitude);
-  ellipse(me.x, me.y, 5, 5);
-  pop();
-
-  push();
-  stroke(255, 217, 0);
-  strokeWeight(0.8);
-  line(me.x,me.y,maldive.x,maldive.y);
+f
 
 }
 }
