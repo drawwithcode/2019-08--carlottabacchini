@@ -91,7 +91,7 @@ function draw() {
   textSize(33);
   textStyle(BOLD)
   textAlign(CENTER,CENTER);
-  text(s, width/2, height/15);
+  text(s, width/2, height/16);
 
 image(myImage0,width/2 + 30,height/2 + 50, 533, 365);
 image(myImage1,width/2 + 30,height/2 - 340, 533, 356);
@@ -112,7 +112,7 @@ function mouseClicked(){
     mouseY < 300
   ){
     maldiveClicked = true //set the click boolean to be true since we clicked, this will turn off the conditional statement above in the draw step and should make the image no-longer render since that code is now 'skipped'
-    malvide.drawPoint; 
+    malvide.drawPoint;
 
   }
 
