@@ -2,7 +2,6 @@ var myImage0;
 var myImage1;
 var myImage2;
 var myImage3;
-let maldiveClicked = false;
 var myMap;
 var canvas;
 var myPos;
@@ -88,27 +87,12 @@ function draw() {
   textAlign(CENTER,CENTER);
   text(s, width/2, height/16);
 
-image(myImage0,width/2 + 30,height/2 + 50, 533, 365);
-image(myImage1,width/2 + 30,height/2 - 340, 533, 356);
-image(myImage2,width/2 - 530 ,height/2 + 50, 533, 365);
-if (maldiveClicked == false) {
-   image(myImage3,500 ,500, 200, 300);
- }
-}
+  var img1 = image(myImage0, width / 2 + 30, height / 2 + 50, 533, 365);
+  var img2 = image(myImage1, width / 2 + 30, height / 2 - 340, 533, 356);
+  var img3 = image(myImage2, width / 2 - 530, height / 2 + 50, 533, 365);
+  var img4 = image(myImage3, width / 2 - 530, height / 2 - 340, 533, 355);
 
-function mouseClicked(){
-  console.log('confirmation that the mouse got clicked!');
-  console.log(mouseX, mouseY); //where is the mouse anyway?
 
-  if(
-    mouseX > 500 && //if the mouse is greather than 200 we're over the image
-    mouseX < 800 && //if the mouse is less than 300 were over the image (since the image is at 200 and is 100 wide = 300)
-    mouseY > 500 && //same idea but on the vertical axis.
-    mouseY < 800
-  ){
-    maldiveClicked = true //set the click boolean to be true since we clicked, this will turn off the conditional statement above in the draw step and should make the image no-longer render since that code is now 'skipped'
-
-  }
 
 
   // function drawPoint() {
