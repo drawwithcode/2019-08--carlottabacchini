@@ -49,6 +49,38 @@ function setup() {
 
   myMap.onChange(drawPoint);
 
+  function drawPoint() {
+    clear();
+    var disAway = calcGeoDistance(myPos.latitude, myPos.longitude, maldiveLat, maldiveLng, "km");
+
+    push();
+    var textMaldive = ("You are" + Math.round(disAway) + "Km away from where you want to be", 70, 70);
+    fill(255);
+    noStroke()
+    pop();
+
+
+    push();
+    var maldive = myMap.latLngToPixel(maldiveLat, maldiveLng);
+    ellipse(maldive.x, maldive.y, 8, 8);
+    noFill();
+    stroke(255, 217, 0);
+    pop();
+
+    push();
+    fill(255, 217, 0);
+    noStroke();
+    var me = myMap.latLngToPixel(myPos.latitude, myPos.longitude);
+    ellipse(me.x, me.y, 5, 5);
+    pop();
+
+    push();
+    stroke(255, 217, 0);
+    strokeWeight(0.8);
+    line(me.x,me.y,maldive.x,maldive.y);
+
+  }
+
 }
 
 function draw() {
@@ -80,38 +112,8 @@ function mouseClicked(){
     mouseY < 300
   ){
     maldiveClicked = true //set the click boolean to be true since we clicked, this will turn off the conditional statement above in the draw step and should make the image no-longer render since that code is now 'skipped'
+    malvide.drawPoint; 
 
-    function drawPoint() {
-      clear();
-      var disAway = calcGeoDistance(myPos.latitude, myPos.longitude, maldiveLat, maldiveLng, "km");
-
-      push();
-      var textMaldive = ("You are" + Math.round(disAway) + "Km away from where you want to be", 70, 70);
-      fill(255);
-      noStroke()
-      pop();
-
-
-      push();
-      var maldive = myMap.latLngToPixel(maldiveLat, maldiveLng);
-      ellipse(maldive.x, maldive.y, 8, 8);
-      noFill();
-      stroke(255, 217, 0);
-      pop();
-
-      push();
-      fill(255, 217, 0);
-      noStroke();
-      var me = myMap.latLngToPixel(myPos.latitude, myPos.longitude);
-      ellipse(me.x, me.y, 5, 5);
-      pop();
-
-      push();
-      stroke(255, 217, 0);
-      strokeWeight(0.8);
-      line(me.x,me.y,maldive.x,maldive.y);
-
-    }
   }
 
   // img4.mouseClicked(function() {
