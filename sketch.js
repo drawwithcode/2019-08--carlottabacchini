@@ -72,7 +72,7 @@ function setup() {
   myMap.overlay(canvas)
 
 
-  myMap.onChange(drawPoint);
+  // myMap.onChange(drawPoint);
 
 
 }
