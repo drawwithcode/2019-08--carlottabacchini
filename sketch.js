@@ -120,7 +120,7 @@ function draw() {
 
   fill(0, 0, 0, 200)
   noStroke()
-  rect(0, 0, windowWidth, windowHeight / 5.5);
+  rect(0, 0, windowWidth, windowHeight / 6);
 
 
   // Head text
@@ -129,7 +129,7 @@ function draw() {
   textAlign(CENTER);
   textFont(tBold)
   fill('#2475db');
-  text('NIGHT LIFE IN MILAN', windowWidth / 2 - 200, windowHeight / 16 - 34, 400, 50);
+  text('NIGHT LIFE IN MILAN', windowWidth / 2 - 200, windowHeight / 16 - 38, 400, 50);
   pop();
 
   // Subtitle
