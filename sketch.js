@@ -134,7 +134,7 @@ function draw() {
 
   // Subtitle
   push();
-  textSize(33);
+  textSize(30);
   textAlign(CENTER);
   fill(197, 255, 140);
   textFont(tRegular)
