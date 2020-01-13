@@ -147,7 +147,7 @@ function draw() {
   textAlign(CENTER);
   fill(197, 255, 140);
   textFont(tLight)
-  text('Click on the icon to obtain your tips', 3, 20, 340, 50);
+  text('Click on the icon to obtain your tips', 3, 20, 340, 20);
   pop()
 
   // Callback of the pop up from the html and set the opening and the closure
