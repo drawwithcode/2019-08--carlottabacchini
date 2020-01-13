@@ -120,7 +120,7 @@ function draw() {
 
   fill(0, 0, 0, 200)
   noStroke()
-  rect(0, 0, windowWidth, windowHeight / 6);
+  rect(0, 0, windowWidth, windowHeight / 8);
 
 
   // Head text
@@ -138,7 +138,7 @@ function draw() {
   textAlign(CENTER);
   fill(197, 255, 140);
   textFont(tRegular)
-  text('Find out a tip on where to go', windowWidth / 2 - 200, windowHeight / 9 - 26, 400, 50);
+  text('Find out a tip on where to go', windowWidth / 2 - 200, windowHeight / 9 - 38, 400, 50);
   pop()
 
   // indications
@@ -147,7 +147,7 @@ function draw() {
   textAlign(CENTER);
   fill(197, 255, 140);
   textFont(tLight)
-  text('Click on the icon to obtain your tips', windowWidth / 2 - 200, windowHeight / 9 + 12, 400, 50);
+  text('Click on the icon to obtain your tips', 3, 20, 340, 50);
   pop()
 
   // Callback of the pop up from the html and set the opening and the closure
